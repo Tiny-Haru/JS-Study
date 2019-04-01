@@ -1,11 +1,12 @@
-function Person(name, age, gender) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+function rFact(num) {
+    if (num === 0) return 1;
+    else return num * rFact(num - 1);
 }
 
-var foo = {};
+function fibonacci(num) {
+    if (num <= 1) return 1;
+    return fibonacci(num - 1) + fibonacci(num - 2);
+}
 
-
-Person.apply(foo, ['foo', 30, 'man']);
-console.dir(foo);
+console.log(rFact(5));
+console.log(fibonacci(10));
